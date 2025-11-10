@@ -10,25 +10,39 @@ This is a **Production-Grade** Automation Framework designed for **UI + API Test
 
 ---
 
-##  Key Features
+## ✅ Key Features
 
-| Feature | Status | Description |
-|--------|--------|-------------|
-| Selenium UI Automation | ✅ | UI Workflow Automation for SauceDemo |
-| API Testing (RestAssured) | ✅ | CRUD + Data Verification using ReqRes API |
-| TestNG Framework | ✅ | Parallel execution + Suite-level config |
-| Page Object Model | ✅ | Clean, reusable maintainable structure |
-| Data-Driven Testing | ✅ | Test data from **Excel + JSON** |
-| WebDriverManager | ✅ | Auto Driver setup (No manual .exe needed) |
-| Allure Report | ✅ | Screenshot on failure + Test Steps + Trends |
-| CI/CD Ready | ✅ | Automated Execution via GitHub Actions |
-| GitHub Pages Deployment | ✅ | Live Hosted Allure Dashboard |
+| Feature | Description |
+|--------|-------------|
+| Selenium Web UI Automation | Automated test coverage for functional UI flows |
+| TestNG Test Execution | Parallel test execution + suite grouping |
+| Page Object Model (POM) | Clean, modular and maintainable structure |
+| Allure Reporting | Rich HTML report with steps, logs & screenshots |
+| API Testing (RestAssured) | CRUD operations validation using ReqRes API |
+| Data Driven Testing | Supports Excel + JSON data sources |
+| Logging (Log4j2) | Centralized test run logging |
+| CI/CD Ready | Works with GitHub Actions / Jenkins |
 
 ---
 
-## 🏗️ Architecture Diagram
+## 🏗️ Architecture & Tech Stack
 
-```
+| Layer | Tools |
+|------|-------|
+| Language | Java |
+| Test Runner | TestNG |
+| UI Automation | Selenium WebDriver |
+| API Testing | RestAssured |
+| Reporting | Allure |
+| Logging | Log4j2 |
+| Build | Maven |
+| Data Input | Excel (Apache POI) + JSON (Jackson) |
+
+---
+
+## 📂 Folder Structure
+
+```text
 
 qa-automation-framework-selenium-testng-allure
 │
