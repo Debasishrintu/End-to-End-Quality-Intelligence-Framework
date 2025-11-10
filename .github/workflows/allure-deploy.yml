@@ -12,8 +12,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout repository (with full history for Allure Trend)
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Java
         uses: actions/setup-java@v4
@@ -27,9 +29,20 @@ jobs:
       - name: Generate Allure Report
         run: mvn allure:report
 
-      - name: Deploy Allure Report to GitHub Pages
+      - name: Download previous Allure history (if exists)
+        run: |
+          git clone --depth 1 --branch gh-pages https://github.com/${{ github.repository }} gh-pages || echo "No previous history found"
+          if [ -d "gh-pages/history" ]; then
+            echo " Copying history from previous report"
+            cp -R gh-pages/history ./target/site/allure-maven-plugin/history
+          else
+            echo "⚠ No previous history to copy"
+          fi
+
+      - name: Deploy Allure Report to GitHub Pages with History
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./target/site/allure-maven-plugin
           publish_branch: gh-pages
+          keep_files: true
