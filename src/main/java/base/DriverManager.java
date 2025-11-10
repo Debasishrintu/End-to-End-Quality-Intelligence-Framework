@@ -13,23 +13,34 @@ public class DriverManager {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
 
-        //  Disable Password Save Popup Completely (Chrome 142+)
+        // Disable Password Save Popup Completely (Chrome 142+)
         options.addArguments("--disable-features=PasswordManagerOnboarding,PasswordManagerUI,CredentialProviderExtension");
         options.addArguments("--password-store=basic");
 
-        //  Run browser clean every time
+        // Run browser clean every time
         options.addArguments("--incognito");
         options.addArguments("--no-default-browser-check");
         options.addArguments("--no-first-run");
 
-        //  Disable notifications & automation banner
+        // Disable notifications & automation banner
         options.addArguments("--disable-notifications");
         options.addArguments("--disable-infobars");
-        options.addArguments("--start-maximized");
         options.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
+
+        // ✅ HEADLESS MODE SUPPORT FOR CI/CD
+        if (System.getProperty("headless", "false").equalsIgnoreCase("true")) {
+            options.addArguments("--headless=new"); // new headless mode
+            options.addArguments("--disable-gpu");
+            options.addArguments("--window-size=1920,1080");
+            options.addArguments("--no-sandbox");
+            options.addArguments("--disable-dev-shm-usage");
+        } else {
+            options.addArguments("--start-maximized");
+        }
 
         driver.set(new ChromeDriver(options));
     }
+
 
     public static WebDriver getDriver() {
         return driver.get();
