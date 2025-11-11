@@ -8,8 +8,8 @@ This is a **Production-Grade** Automation Framework designed for **UI + API Test
 ### 🔥 Live Allure Report Dashboard  
 🔗 **[https://debasish-87.github.io/FullStack-QA-Automation-Framework/](https://debasish-87.github.io/FullStack-QA-Automation-Framework/)**
 
-[![Allure_Report](https://img.shields.io/badge/Allure-Report-blue?style=for-the-badge)](https://debasish-87.github.io/qa-automation-framework-selenium-testng-allure/)
-[![Build Status](https://img.shields.io/github/actions/workflow/status/Debasish-87/qa-automation-framework-selenium-testng-allure/allure-deploy.yml?label=CI%20Build&style=for-the-badge)](https://github.com/Debasish-87/qa-automation-framework-selenium-testng-allure/actions)
+[![Allure_Report](https://img.shields.io/badge/Allure-Report-blue?style=for-the-badge)](https://debasish-87.github.io/FullStack-QA-Automation-Framework/)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/Debasish-87/FullStack-QA-Automation-Framework/allure-deploy.yml?label=CI%20Build&style=for-the-badge)](https://github.com/Debasish-87/FullStack-QA-Automation-Framework/actions)
 
 ---
 
