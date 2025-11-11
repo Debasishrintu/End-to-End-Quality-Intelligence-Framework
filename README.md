@@ -46,65 +46,66 @@ This is a **Production-Grade** Automation Framework designed for **UI + API Test
 
 qa-automation-framework-selenium-testng-allure
 │
-├── pom.xml                        # Project dependencies & plugins
-├── testng.xml                     # Test Suite Runner
-├── README.md                      # Project Documentation
+├── pom.xml # Project dependencies & plugins (Selenium, TestNG, Allure, MySQL, WDM, REST-Assured)
+├── testng.xml # Test Suite Runner
+├── README.md # Project Documentation
 │
 ├── src
-│   ├── main
-│   │   ├── java
-│   │   │   ├── base               # BaseTest & WebDriver Manager
-│   │   │   │   ├── BaseTest.java
-│   │   │   │   └── DriverManager.java
-│   │   │   │
-│   │   │   ├── pages              # Page Object Model Classes
-│   │   │   │   ├── LoginPage.java
-│   │   │   │   ├── InventoryPage.java
-│   │   │   │   ├── CartPage.java
-│   │   │   │   ├── CheckoutInfoPage.java
-│   │   │   │   ├── CheckoutOverviewPage.java
-│   │   │   │   └── OrderSuccessPage.java
-│   │   │   │
-│   │   │   ├── utils              # Common Utilities
-│   │   │   │   ├── WaitUtils.java
-│   │   │   │   ├── LoggerUtil.java
-│   │   │   │   ├── ScreenshotUtils.java
-│   │   │   │   ├── ExcelUtils.java
-│   │   │   │   └── JsonUtils.java
-│   │   │   │
-│   │   │   └── api                # API Client + Service Layer
-│   │   │       ├── ApiClient.java
-│   │   │       └── ReqResService.java
-│   │   │
-│   │   └── resources              # Configurations
-│   │       ├── config.properties
-│   │       ├── environment.properties
-│   │       └── log4j2.xml
-│   │
-│   └── test
-│       ├── java
-│       │   ├── tests
-│       │   │   ├── ui              # UI Test Cases
-│       │   │   │   ├── LoginTest.java
-│       │   │   │   └── CheckoutFlowTests.java
-│       │   │   │
-│       │   │   └── api             # API Test Cases
-│       │   │       ├── ReqResApiTests.java
-│       │   │       └── ReqResTests.java
-│       │   │
-│       │   └── listeners           # Screenshot + Logging Listener
-│       │       └── TestListener.java
-│       │
-│       └── resources/testdata      # Test Data (Excel + JSON)
-│           ├── logindata.xlsx
-│           └── createUser.json
+│ ├── main
+│ │ ├── java
+│ │ │ ├── base # Base + WebDriver Setup Layer
+│ │ │ │ ├── BaseTest.java # Test setup, teardown & driver lifecycle
+│ │ │ │ └── DriverManager.java # Local / Remote driver factory + headless support
+│ │ │ │
+│ │ │ ├── pages # Page Object Model (UI Screens)
+│ │ │ │ ├── LoginPage.java
+│ │ │ │ ├── InventoryPage.java
+│ │ │ │ ├── CartPage.java
+│ │ │ │ ├── CheckoutInfoPage.java
+│ │ │ │ ├── CheckoutOverviewPage.java
+│ │ │ │ └── OrderSuccessPage.java
+│ │ │ │
+│ │ │ ├── utils # Common Utilities & Helpers
+│ │ │ │ ├── WaitUtils.java
+│ │ │ │ ├── LoggerUtil.java
+│ │ │ │ ├── ScreenshotUtils.java
+│ │ │ │ ├── ExcelUtils.java # Excel Data Provider
+│ │ │ │ ├── JsonUtils.java # JSON Data Provider
+│ │ │ │ ├── ConfigReader.java # config.properties loader
+│ │ │ │ └── DatabaseUtils.java # MySQL DB Integration (Tests read credentials from DB)
+│ │ │ │
+│ │ │ └── api # API Service Layer (REST-Assured)
+│ │ │ ├── ApiClient.java # Base request specification
+│ │ │ └── ReqResService.java # Example API service wrapper
+│ │ │
+│ │ └── resources # Framework Configurations
+│ │ ├── config.properties # URL, browser, DB connection settings
+│ │ ├── environment.properties # Example env switch support
+│ │ └── log4j2.xml # Logging config
+│ │
+│ └── test
+│ ├── java
+│ │ ├── tests
+│ │ │ ├── ui # UI Functional Tests (Selenium + TestNG)
+│ │ │ │ ├── LoginTest.java # Login test using DB + DataProvider
+│ │ │ │ └── CheckoutFlowTests.java
+│ │ │ │
+│ │ │ └── api # API Tests (REST-Assured + TestNG)
+│ │ │ ├── ReqResApiTests.java
+│ │ │ └── ReqResTests.java
+│ │ │
+│ │ └── listeners # Reporting + Screenshot on Failure
+│ │ └── TestListener.java # Allure Listener
+│ │
+│ └── resources/testdata # Data-Driven Testing Files
+│ ├── logindata.xlsx # Excel-based test data
+│ └── createUser.json # JSON test payload
 │
-├── allure-results                  # Allure raw execution logs
-├── logs                            # Execution logs
-└── .github/workflows               # CI/CD pipelines
-    ├── ci.yml
-    └── allure-deploy.yml
-
+├── allure-results # Allure execution result files (auto-generated)
+├── logs # Framework execution logs
+└── .github/workflows # CI/CD Pipelines
+├── ci.yml # GitHub Actions test pipeline (headless execution + MySQL container)
+└── allure-deploy.yml # Optional: auto-publish Allure report
 
 ````
 
