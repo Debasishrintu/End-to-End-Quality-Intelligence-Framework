@@ -1,4 +1,4 @@
-# QA Automation Framework (Selenium + TestNG + Allure + API + CI/CD + GitHub Pages)
+# QA Automation Framework (Selenium + TestNG + Allure + API + DB + CI/CD + GitHub Pages)
 
 This is a **Production-Grade** Automation Framework designed for **UI + API Testing** with a clean, modular structure using **Page Object Model (POM)**, **Data-Driven Testing**, **Allure Reporting**, and **Continuous Integration** via **GitHub Actions**.
 
