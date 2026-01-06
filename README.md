@@ -200,6 +200,15 @@ Workflow File:
 
 > “This framework demonstrates end-to-end automation capability including UI + API testing, POM-based architecture, data-driven execution, advanced reporting using Allure, and CI/CD pipeline integration. The report is auto-published to GitHub Pages for real-time visibility.”
 
+## Who is this for?
+This framework demonstrates real-world SDET practices used in product companies:
+- UI + API automation
+- CI/CD-integrated testing
+- Cloud-ready test execution
+- Scalable and maintainable architecture
+
+Designed for production-grade automation, not demo testing.
+
 ---
 
 ## 👤 Author
