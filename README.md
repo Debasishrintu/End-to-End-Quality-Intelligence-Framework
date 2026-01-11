@@ -1,194 +1,253 @@
-# Full-Stack QA Automation Framework  
+# 🚀 End-to-End Quality Intelligence Framework (QE 1.0)
 
-## *( Selenium + TestNG + POM + Allure Reporting + API + Database + CI/CD with GitHub Pages Dashboard )*
-
-
-This is a **Production-Grade** Automation Framework designed for **UI + API Testing + Database Testing** with a clean, modular structure using **Page Object Model (POM)**, **Data-Driven Testing**, **Allure Reporting**, and **Continuous Integration** via **GitHub Actions**.
-
-### 🔥 Live Allure Report Dashboard  
-🔗 **[https://debasish-87.github.io/FullStack-QA-Automation-Framework/](https://debasish-87.github.io/FullStack-QA-Automation-Framework/)**
-
-[![Allure_Report](https://img.shields.io/badge/Allure-Report-blue?style=for-the-badge)](https://debasish-87.github.io/FullStack-QA-Automation-Framework/)
-[![Build Status](https://img.shields.io/github/actions/workflow/status/Debasish-87/FullStack-QA-Automation-Framework/allure-deploy.yml?label=CI%20Build&style=for-the-badge)](https://github.com/Debasish-87/FullStack-QA-Automation-Framework/actions)
+> **Production-grade Quality Engineering framework that goes beyond automation to deliver real-time release quality intelligence using CI/CD, Allure dashboards, and Go/No-Go decision support.**
 
 ---
 
+## 📌 Overview
 
-## ✅ Key Features
+The **End-to-End Quality Intelligence Framework** is a **QE 1.0-level automation and quality visibility platform** built by evolving a full-stack automation framework into a **decision-driven quality system**.
 
-| Feature | Description |
-|--------|-------------|
-| Selenium Web UI Automation | Automated test coverage for functional UI flows |
-| TestNG Test Execution | Parallel test execution + suite grouping |
-| Page Object Model (POM) | Clean, modular and maintainable structure |
-| Allure Reporting | Rich HTML report with steps, logs & screenshots |
-| API Testing (RestAssured) | CRUD operations validation using ReqRes API |
-| Data Driven Testing | Supports Excel + JSON data sources |
-| Logging (Log4j2) | Centralized test run logging |
-| CI/CD Ready | Works with GitHub Actions / Jenkins |
+Unlike traditional automation frameworks that stop at *test execution*, this framework provides:
 
----
+* **Smoke & Regression suite intelligence**
+* **Critical test impact analysis**
+* **Centralized Allure dashboards**
+* **Release-level Go / No-Go visibility**
+* **CI/CD-driven quality reporting**
 
-## 🏗️ Architecture & Tech Stack
-
-| Layer | Tools |
-|------|-------|
-| Language | Java |
-| Test Runner | TestNG |
-| UI Automation | Selenium WebDriver |
-| API Testing | RestAssured |
-| Reporting | Allure |
-| Logging | Log4j2 |
-| Build | Maven |
-| Data Input | Excel (Apache POI) + JSON (Jackson) |
+This mirrors how **modern product companies** implement Quality Engineering.
 
 ---
 
-## 📂 Folder Structure
+## 🔥 Live Allure Quality Dashboard
 
-```text
+📊 **Live Report (GitHub Pages)**
+🔗 **[https://debasish-87.github.io/End-to-End-Quality-Intelligence-Framework/](https://debasish-87.github.io/End-to-End-Quality-Intelligence-Framework/)**
 
-FullStack-QA-Automation-Framework
+The dashboard is automatically generated and published on every pipeline run.
+
+---
+
+## 🧠 What Makes This a “Quality Intelligence” Framework?
+
+Traditional automation answers:
+
+> “Did tests pass?”
+
+This framework answers:
+
+> **“Is this build safe to release?”**
+
+### Key Intelligence Layers:
+
+* Test criticality awareness
+* Smoke vs Regression confidence
+* Severity-based risk visibility
+* CI/CD-driven release readiness
+
+---
+
+## ✅ Core Capabilities
+
+### 🧪 Test Automation Coverage
+
+| Layer               | Tools              |
+| ------------------- | ------------------ |
+| UI Automation       | Selenium WebDriver |
+| API Automation      | RestAssured        |
+| Database Validation | MySQL              |
+| Test Runner         | TestNG             |
+| Language            | Java 17            |
+
+---
+
+### 🚦 Suite Intelligence
+
+| Suite      | Purpose                           |
+| ---------- | --------------------------------- |
+| Smoke      | Fast confidence on critical flows |
+| Regression | Full functional coverage          |
+| Critical   | Business-blocking validations     |
+
+Suites are controlled using:
+
+* `smoke.xml`
+* `regression.xml`
+* TestNG groups (`Smoke`, `Regression`, `Critical`)
+
+---
+
+### 📊 Quality Metrics Engine
+
+Automatically computes:
+
+* Total tests executed
+* Pass / Fail percentage
+* Critical test failures
+* Execution trends (Allure history ready)
+
+---
+
+### 🧠 Release Decision Engine
+
+Generates decision-oriented insights like:
+
+```
+SMOKE: PASS
+REGRESSION: 95%
+CRITICAL FAILURES: 1
+
+FINAL RELEASE DECISION: ❌ HOLD
+```
+
+This simulates **real release review meetings** in companies.
+
+---
+
+## 🏗️ Architecture Overview
+
+```
+Code Commit
+   ↓
+CI/CD Pipeline (GitHub Actions)
+   ↓
+Build + Test Execution
+   ↓
+Quality Intelligence Framework
+   ├── UI Automation
+   ├── API Automation
+   ├── Database Validation
+   ├── Smoke / Regression Suites
+   ├── Critical Test Analysis
+   ↓
+Quality Metrics Engine
+   ↓
+Allure Centralized Dashboard
+   ↓
+Release Visibility (Go / No-Go)
+```
+
+---
+
+## 🧩 Project Structure
+
+```
+End-to-End-Quality-Intelligence-Framework
 │
-├── pom.xml                         # Dependencies & Plugins
-├── testng.xml                      # Test Suite Runner
-├── README.md                       # Project Documentation
+├── pom.xml
+├── README.md
+├── testng.xml
+├── smoke.xml
+├── regression.xml
 │
 ├── src
 │   ├── main
 │   │   ├── java
-│   │   │   ├── base                # WebDriver Setup Layer
+│   │   │   ├── base
 │   │   │   │   ├── BaseTest.java
 │   │   │   │   └── DriverManager.java
 │   │   │   │
-│   │   │   ├── pages               # Page Object Model Classes
+│   │   │   ├── pages
 │   │   │   │   ├── LoginPage.java
 │   │   │   │   ├── InventoryPage.java
-│   │   │   │   ├── CartPage.java
-│   │   │   │   ├── CheckoutInfoPage.java
-│   │   │   │   ├── CheckoutOverviewPage.java
-│   │   │   │   └── OrderSuccessPage.java
+│   │   │   │   └── CheckoutFlow pages
 │   │   │   │
-│   │   │   ├── utils               # Utilities (Common Helpers)
-│   │   │   │   ├── WaitUtils.java
-│   │   │   │   ├── LoggerUtil.java
-│   │   │   │   ├── ScreenshotUtils.java
-│   │   │   │   ├── ExcelUtils.java
-│   │   │   │   ├── JsonUtils.java
-│   │   │   │   ├── ConfigReader.java      # Reads config.properties
-│   │   │   │   └── DatabaseUtils.java     # MySQL Database Connection + Queries
+│   │   │   ├── intelligence
+│   │   │   │   ├── metrics
+│   │   │   │   │   ├── QualityMetrics.java
+│   │   │   │   │   ├── AllureResultReader.java
+│   │   │   │   │   └── CriticalTestAnalyzer.java
+│   │   │   │   │
+│   │   │   │   └── decision
+│   │   │   │       └── ReleaseDecisionEngine.java
 │   │   │   │
-│   │   │   └── api                 # API Testing Layer (REST-Assured)
-│   │   │       ├── ApiClient.java
-│   │   │       └── ReqResService.java
+│   │   │   ├── api
+│   │   │   └── utils
 │   │   │
-│   │   └── resources               # Configuration Files
-│   │       ├── config.properties   # App URLs, browser, DB credentials
+│   │   └── resources
+│   │       ├── config.properties
 │   │       ├── environment.properties
-│   │       └── log4j2.xml          # Logging Configuration
+│   │       └── log4j2.xml
 │   │
 │   └── test
 │       ├── java
 │       │   ├── tests
-│       │   │   ├── ui              # UI Test Cases (Selenium + TestNG)
-│       │   │   │   ├── LoginTest.java
-│       │   │   │   └── CheckoutFlowTests.java
-│       │   │   │
-│       │   │   └── api             # API Test Cases (REST-Assured)
-│       │   │       ├── ReqResApiTests.java
-│       │   │       └── ReqResTests.java
+│       │   │   ├── ui
+│       │   │   └── api
 │       │   │
-│       │   └── listeners           # Screenshot & Logging Listeners
-│       │       └── TestListener.java
+│       │   └── intelligence
+│       │       ├── QualityMetricsTest.java
+│       │       └── ReleaseDecisionTest.java
 │       │
-│       └── resources/testdata      # Test Data Files
-│           ├── logindata.xlsx
-│           └── createUser.json
+│       └── resources
+│           ├── testdata
+│           └── categories.json
 │
-├── allure-results                  # Allure raw execution result files
-├── logs                            # Framework execution logs
-└── .github/workflows               # CI/CD pipelines
-    ├── ci.yml
+├── logs
+├── allure-results
+└── .github/workflows
     └── allure-deploy.yml
-
-````
+```
 
 ---
 
-##  Test Execution
+## 🧪 Test Execution Commands
 
-### Run All Tests:
+### Run All Tests
+
 ```bash
 mvn clean test
-````
+```
 
-### Run in **Headless Mode** (CI/CD mode):
+### Run Smoke Suite
+
+```bash
+mvn clean test "-DsuiteXmlFile=smoke.xml"
+```
+
+### Run Regression Suite
+
+```bash
+mvn clean test "-DsuiteXmlFile=regression.xml"
+```
+
+### Headless Mode (CI/CD)
 
 ```bash
 mvn clean test -Dheadless=true
 ```
 
-### Generate Allure Report:
+---
+
+## 📊 Allure Reporting
+
+### Generate & View Locally
 
 ```bash
 mvn allure:serve
 ```
 
----
+### Auto-Published via CI/CD
 
-##  Allure Report Includes
+Allure reports are automatically:
 
-✔ Step-Level Execution Logs
-✔ Screenshots on Failure
-✔ Execution Timeline
-✔ Test History + Trend UI
-✔ Environment Metadata
+* Generated after test execution
+* Deployed to GitHub Pages
+* Available as a live dashboard
 
 ---
 
-##  UI Test Scenarios (SauceDemo)
+## 🔁 CI/CD Pipeline (GitHub Actions)
 
-| Scenario               | Status |
-| ---------------------- | ------ |
-| Valid User Login       | ✅      |
-| Locked User Login      | ✅      |
-| Add To Cart            | ✅      |
-| Checkout & Place Order | ✅      |
+The pipeline automatically:
 
----
+* Runs on every push
+* Executes tests
+* Generates Allure reports
+* Publishes reports to GitHub Pages
 
-##  API Test Scenarios (ReqRes API)
-
-| Endpoint          | Method | Purpose     | Status |
-| ----------------- | ------ | ----------- | ------ |
-| `/api/users`      | POST   | Create User | ✅      |
-| `/api/users/{id}` | GET    | Fetch User  | ✅      |
-
----
-
-##  Tech Stack
-
-| Layer         | Tool               |
-| ------------- | ------------------ |
-| Language      | Java 17            |
-| Test Runner   | TestNG             |
-| UI Automation | Selenium WebDriver |
-| API Testing   | RestAssured        |
-| Reporting     | Allure Report      |
-| Logging       | Log4j2             |
-| Build Tool    | Maven              |
-
----
-
-##  CI/CD - GitHub Actions Workflow
-
-This project automatically:
-
-* Runs tests on every push
-* Generates Allure Report
-* Publishes Report to `GitHub Pages` branch
-
-Workflow File:
+Workflow file:
 
 ```
 .github/workflows/allure-deploy.yml
@@ -196,29 +255,36 @@ Workflow File:
 
 ---
 
-##  How to Explain This in an Interview
+## 🧠 How to Explain This in an Interview
 
-> “This framework demonstrates end-to-end automation capability including UI + API testing, POM-based architecture, data-driven execution, advanced reporting using Allure, and CI/CD pipeline integration. The report is auto-published to GitHub Pages for real-time visibility.”
+> “I built an End-to-End Quality Intelligence Framework that integrates UI, API, and database automation with CI/CD pipelines. It generates Allure dashboards and provides release-level quality visibility, enabling Go/No-Go decisions based on test criticality.”
 
-## Who is this for?
-This framework demonstrates real-world SDET practices used in product companies:
-- UI + API automation
-- CI/CD-integrated testing
-- Cloud-ready test execution
-- Scalable and maintainable architecture
+🔥 This demonstrates **QE mindset**, not just automation.
 
-Designed for production-grade automation, not demo testing.
+---
+
+## 🎯 Who Is This Framework For?
+
+This project reflects **real-world Quality Engineering practices** used in:
+
+* Product companies
+* SaaS platforms
+* Enterprise QE teams
+
+Designed for:
+
+* Scalable automation
+* CI/CD integration
+* Release confidence
+* Stakeholder visibility
 
 ---
 
 ## 👤 Author
 
-**Debasish** — QA Automation | Cloud DevOps Engineer
+**Debasish**
+SDET | QA Automation | Quality Engineering | CI/CD
 📧 Email: [debasishm8765@gmail.com](mailto:debasishm8765@gmail.com)
-🔗 GitHub Profile: [https://github.com/Debasish-87](https://github.com/Debasish-87)
-
----
-
-✨ *If this helped you — give it a star ⭐ on GitHub.*
+🔗 GitHub: [https://github.com/Debasish-87](https://github.com/Debasish-87)
 
 ---
